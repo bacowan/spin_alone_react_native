@@ -5,7 +5,9 @@ const { SpotifyModule } = NativeModules;
 export default function Play() {
     useEffect(() => {
         console.log('We will invoke the native module here!');
-        SpotifyModule.createCalendarEvent('testName', 'testLocation');
+        (async () => {
+            const authorization = await SpotifyModule.authorize();
+        })();
     }, []);
 
     return <Text>Hi</Text>

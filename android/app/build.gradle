@@ -4,6 +4,10 @@ apply plugin: "com.facebook.react"
 
 def projectRoot = rootDir.getAbsoluteFile().getParentFile().getAbsolutePath()
 
+repositories {
+    mavenCentral()
+}
+
 /**
  * This is the configuration block to customize your React Native Android app.
  * By default you don't need to apply any configuration, just uncomment the lines you need.
@@ -144,6 +148,12 @@ dependencies {
     implementation("com.facebook.react:react-android")
     implementation fileTree(dir: '../libs', include: ['*.aar', '*.jar'], exclude: [])
     implementation("com.google.code.gson:gson:2.10")
+
+    implementation 'com.spotify.android:auth:1.2.6' // Maven dependency
+
+    // All other dependencies for your app should also be here:
+    implementation 'androidx.browser:browser:1.8.0'
+    implementation "androidx.appcompat:appcompat:1.7.0"
 
     def isGifEnabled = (findProperty('expo.gif.enabled') ?: "") == "true";
     def isWebpEnabled = (findProperty('expo.webp.enabled') ?: "") == "true";

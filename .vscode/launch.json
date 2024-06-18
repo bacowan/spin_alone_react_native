@@ -9,7 +9,7 @@
             "request": "attach",
             "type": "reactnativedirect",
             "cwd": "${workspaceFolder}",
-            "address": "http://192.168.247.46"
+            "address": ""
         },
         {
             "name": "Attach to Hermes application",
