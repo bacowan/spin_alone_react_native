@@ -1,0 +1,4 @@
+package com.bacowan.spin_alone
+
+public val clientId = "your_client_id"
+public val redirectUri = "http://com.yourdomain.yourapp/callback"
