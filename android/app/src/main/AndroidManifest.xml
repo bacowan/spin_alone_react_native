@@ -28,6 +28,17 @@
         <data android:scheme="com.bacowan.spin_alone"/>
         <data android:scheme="exp+spinalone"/>
       </intent-filter>
+      <intent-filter>
+          <action android:name="android.intent.action.VIEW"/>
+
+          <category android:name="android.intent.category.DEFAULT"/>
+          <category android:name="android.intent.category.BROWSABLE"/>
+
+          // this needs to match the scheme and host of the redirect URI as defined in My applications page
+          <data
+              android:host="localhost"
+              android:scheme="http"/>
+     </intent-filter>
     </activity>
     <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" android:exported="false"/>
   </application>

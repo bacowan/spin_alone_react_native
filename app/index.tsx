@@ -1,4 +1,5 @@
 import { View } from "react-native";
+import * as Linking from 'expo-linking';
 import { Stack, Link } from 'expo-router';
 import { Button, useTheme } from 'react-native-paper';
 

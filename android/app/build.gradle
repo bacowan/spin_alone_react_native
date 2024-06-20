@@ -94,6 +94,7 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0.0"
+        manifestPlaceholders = [redirectHostName: 'localhost', redirectSchemeName: 'http']
     }
     signingConfigs {
         debug {
@@ -146,12 +147,11 @@ android {
 dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
-    implementation fileTree(dir: '../libs', include: ['*.aar', '*.jar'], exclude: [])
-    implementation("com.google.code.gson:gson:2.10")
-
-    implementation 'com.spotify.android:auth:1.2.6' // Maven dependency
 
     // All other dependencies for your app should also be here:
+    implementation fileTree(dir: '../libs', include: ['*.aar', '*.jar'], exclude: [])
+    implementation("com.google.code.gson:gson:2.10.1")
+    implementation 'com.spotify.android:auth:2.1.2' // Maven dependency
     implementation 'androidx.browser:browser:1.8.0'
     implementation "androidx.appcompat:appcompat:1.7.0"
 

@@ -21,3 +21,4 @@ expo-env.d.ts
 
 android/libs/*
 android/app/src/main/java/com/bacowan/spin_alone/config.kt
+config.tsx
